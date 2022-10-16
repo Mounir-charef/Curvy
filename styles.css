@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    color: snow;
+    background-color: #0f0f10;
+    overflow-x: hidden;
+    --dark: rgb(20,20,20);
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 24rem;
+    padding: 7rem 20vw;
+}
+
+.blue {
+    background-color: cornflowerblue;
+}
+
+.red {
+    background-color: crimson;
+}
+
+.green {
+    background-color: limegreen;
+}
+
+.pink {
+    background-color: #ff0066;
+}
+
+.dark {
+    background-color: var(--dark);
+}
+.ocean {
+    background-color: #001220;
+}
+
+.curve {
+    position: absolute;
+    height: 14rem;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #0f0f10;
+    translate: 85% 60%;
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: cornflowerblue;
+    translate: -4% 40%;
+}
+
+.bubble::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: var(--dark) ;
+}
+
+.wavvy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wavvy svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 119px;
+}
+
+.wavvy .shape-fill {
+    fill: #0F0F10;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer {
+    background-image: url("layered-waves-haikei.svg");
+}
+
+.flip {
+    rotate: 180deg;
+}
